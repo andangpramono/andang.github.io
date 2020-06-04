@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Andang Pramono</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="http://pesananku.com/assets/js/jquery-3.3.1.min.js"></script>
+	<script src="http://pesananku.com/assets/js/jquery.validate.min.js" ></script>
+	<script src="http://pesananku.com/assets/js/swiper.min.js"></script>
+	<script src="http://pesananku.com/assets/js/jquery.custom.js"></script>
+	<script type='text/javascript' src="http://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<br>
+		<h2 class="text-center">Andang Pramono</h2>
+		<br>
+		<div class="text-center" id="loading">
+			<div class="spinner-border" role="status">
+			    <span class="sr-only">Loading...</span>
+			</div>
+		</div>
+		<div class="row" id="news" width="100%">
+			
+		</div>
+	</div>
+	<script type="text/javascript">
+		//$('#news').html('tesqqqq');
+		var contentType ="application/x-www-form-urlencoded; charset=utf-8";
+		 $.ajax({
+		 	url: "http://pesananku.com/tests/news.php",
+			contentType:contentType,
+		 	success: function(result){
+    			$('#news').html('<small><i>*auto generate content</i></small>'+result);
+    			$('#loading').html(' ');
+  			}
+  		});
+	</script>
+</body>
+</html>
